@@ -1,36 +1,23 @@
-body {
-    font-family: Arial,sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
-h1 {
-    color: #333;
+
+.container {
+    background: #171717;
+    color: #fff;
+    padding: 2rem;
+    width: 40%;
+    margin: 4rem auto;
+    border-radius: 10px;
 }
-#weather-container {
+.weather_header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 }
 
-#city {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#weather-output {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #555;
-}
