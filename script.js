@@ -13,6 +13,8 @@ let weather__realfeel = document.querySelector(".weather__realfeel");
 let weather__humidity = document.querySelector(".weather__humidity");
 let weather__wind = document.querySelector(".weather__wind");
 let weather__pressure = document.querySelector(".weather__pressure");
+let weather_windDirection = document.querySelector(".weather__wind-direction i");  
+const themeSwitch = document.getElementById('themeSwitch'); 
 const body = document.body;
 
 // Check local storage for theme preference
@@ -47,7 +49,7 @@ document.querySelector(".weather__search").addEventListener('submit', e => {
     getWeather();
     //clearform
     search.value = ""
-})
+});
 
 //units
 document.querySelector(".weather_unit_celsius").addEventListener('click', () => {
@@ -110,5 +112,6 @@ function getWeather() {
         container.classList.add(`weather__${mainWeather}`);
     })
 }
+
 window.addEventListener('load', getWeather());
 
