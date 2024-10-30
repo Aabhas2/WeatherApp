@@ -7,13 +7,80 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --background-color: #171717;
+    --text-color: #ffffff;
+    --secondary-background: #1e1e1e;
+    --switch-background: #ccc;
+    --switch-active: #2196F3;
+}
+
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #171717;
+    --secondary-background: #f0f0f0;
+    --switch-background: #eee;
+    --switch-active: #4CAF50;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
 .container {
-    background: #171717;
-    color: #fff;
+    background: var(--background-color);
+    color: var(--text-color);
     padding: 2rem;
     width: 40%;
     margin: 4rem auto;
     border-radius: 10px;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input {display: none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    border-radius: 50%;
+}
+input:checked + .slider {background-color: var(--switch-active)}
+input:checked + .slider:before {transform: translateX(20px);}
+
+.weather__clear{
+    background: linear-gradient(to right,#f8d800,#fdeb71);
+}
+.weather__cloudy {
+    background: linear-gradient(to right, #bdc3c7,#2c3e50);
+}
+.weather__rain{
+    background: linear-gradient((to right,#2b5876,#4e4376));
+}
+.weather__snow{background: linear-gradient(to right,#E0EAFC,#cfdef3);
 }
 
 .weather__header {
@@ -24,15 +91,15 @@
 
 input {
     border: none;
-    background: #1e1e1e;
+    background: var(--secondary-background);
     outline: none;
-    color: #fff;
+    color: var(--text-color);
     padding: 0.5rem 2.5rem;
     border-radius: 5px;
 }
 
 input::placeholder {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .weather__search {
@@ -44,7 +111,7 @@ input::placeholder {
     left: 10px;
     top: 10px;
     font-size: 15px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .weather__units {
@@ -70,7 +137,7 @@ input::placeholder {
 }
 
 .weather__forecast {
-    background: #1e1e1e;
+    background: var(--secondary-background);
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 30px;
@@ -104,7 +171,8 @@ input::placeholder {
 .weather__card {
     display: flex;
     align-items: center;
-    background: #1e1e1e;
+    background: var(--secondary-background);
+    color: var(--text-color);
     padding: 1rem;
     border-radius: 10px;
 }
