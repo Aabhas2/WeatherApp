@@ -43,9 +43,9 @@ The Weather App provides the following functionalities:
     ```bash
     Open the index.html file in your browser to start the app
 
-#License 
+## License 
 The project is licensed under the MIT License, which is a permissive license allowing anyone to use, modify, and distribute the code freely. Under MIT:
 
--You can use this code for personal or commercial projects.
--Modifications and contributions are allowed.
--Attribution to the original author is required when redistributing the code.
+- You can use this code for personal or commercial projects.
+- Modifications and contributions are allowed.
+- Attribution to the original author is required when redistributing the code.
