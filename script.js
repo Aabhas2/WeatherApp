@@ -32,7 +32,7 @@ document.querySelector(".weather__search").addEventListener('submit',e=>{
 document.querySelector("weather_unit_celsius").addEventListener('click',()=>{
     if(units!=="metric"){
         //change to metric
-        unit = "metric"
+        units = "metric"
         //get the weather forecast 
         getWeather();
     }
@@ -41,7 +41,7 @@ document.querySelector("weather_unit_celsius").addEventListener('click',()=>{
 document.querySelector("weather_unit_farenheit").addEventListener('click',()=>{
     if(units!=="imperial"){
         //change to imperial
-        unit = "imperial"
+        units = "imperial"
         //get the weather forecast 
         getWeather();
     }
@@ -81,7 +81,7 @@ function getWeather() {
         <p>Max:${data.main.temp_max.toFixed()}&#176</p>`
         weather__realfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`
         weather__humidity.innerHTML = `${data.main.humidity}%`
-        weather__wind.innerHTML = `${data.wind.speed}${units==="imperial"?"mph":"m/s"}`
+        weather__wind.innerHTML = `${data.wind.speed} ${units ==="imperial"?"mph":"m/s"}`
         weather__pressure.innerHTML = `${data.main.pressure}hPa`
     })
 }
